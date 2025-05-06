@@ -1,0 +1,108 @@
+.floatingContainer {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.floatingButton {
+    display: flex;
+    align-items: center;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.8rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.expanded {
+    border-radius: 25px;
+    padding: 0.8rem 1.5rem;
+}
+
+.icon {
+    font-size: 1.5rem;
+}
+
+.text {
+    margin-left: 0.5rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.contactOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.contactOption {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text);
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.contactOption:hover {
+    background-color: var(--secondary);
+}
+
+.optionIcon {
+    font-size: 1.2rem;
+}
+
+.optionText {
+    font-weight: 500;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .floatingContainer {
+        bottom: 1.5rem;
+        left: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .floatingButton {
+        padding: 0.7rem;
+    }
+
+    .expanded {
+        padding: 0.7rem 1.2rem;
+    }
+
+    .contactOptions {
+        left: 0;
+        width: 100%;
+        max-width: 250px;
+    }
+}

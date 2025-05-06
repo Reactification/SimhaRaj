@@ -1,0 +1,151 @@
+.servicesSection {
+    position: relative;
+    padding: 80px 0;
+    background-image: url('/images/services-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow: hidden;
+    isolation: isolate;
+    filter: saturate(1.5);
+}
+
+.backgroundOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 3rem;
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.serviceCard {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    will-change: transform;
+}
+
+.serviceCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.iconWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.icon {
+    font-size: 2.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.serviceCard h3 {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.serviceCard h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+}
+
+.serviceCard p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.benefitsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefitsList li {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.benefitsList li::before {
+    content: '•';
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .servicesSection {
+        padding: 60px 0;
+    }
+
+    .content h2 {
+        font-size: 2rem;
+    }
+
+    .servicesGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .serviceCard {
+        padding: 1.2rem;
+    }
+}

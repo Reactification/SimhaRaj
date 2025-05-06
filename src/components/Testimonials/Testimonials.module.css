@@ -1,0 +1,115 @@
+.testimonials {
+    position: relative;
+    padding: 8rem 2rem;
+    background-image: url('/images/testimonials-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* This creates the basic parallax effect */
+    color: white;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 30, 0.7);
+    /* Dark blue tint */
+    z-index: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+    padding: 2rem;
+}
+
+.quote {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--accent);
+}
+
+.info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.info p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .testimonials {
+        padding: 6rem 1rem;
+        background-attachment: scroll;
+        /* Fallback for mobile which often doesn't support 'fixed' */
+    }
+
+    .container h2 {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

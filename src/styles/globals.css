@@ -1,0 +1,139 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary: #1E3A8A;
+    --secondary: #F3F4F6;
+    --accent: #F97316;
+    --text: #333333;
+    --background: #FFFFFF;
+
+    /* Dark mode variables */
+    --dark-primary: #0F1D45;
+    --dark-background: #1A1A1A;
+    --dark-text: #F3F4F6;
+}
+
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background: var(--background);
+    line-height: 1.6;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+/* Common styles */
+.section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    background-color: var(--accent);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #E65C00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slide-in {
+    animation: slideIn 1s ease-out forwards;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] {
+    --primary: var(--dark-primary);
+    --background: var(--dark-background);
+    --text: var(--dark-text);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .section {
+        padding: 3rem 1rem;
+    }
+}
