@@ -82,7 +82,8 @@
     }
 
     .imageWrapper {
-        max-width: 300px;
+        max-width: 100%;
+        aspect-ratio: 16/9;
         margin: 0 auto;
     }
 

@@ -65,7 +65,7 @@ export default function Products() {
     };
 
     return (
-        <section className={styles.productsSection}>
+        <section id="products" className={styles.productsSection}>
             <div className={styles.backgroundOverlay}></div>
             <div className={styles.content}>
                 <h2>Our Products</h2>

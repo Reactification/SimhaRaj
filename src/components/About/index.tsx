@@ -39,8 +39,8 @@ export default function About() {
                     <Image
                         src="/images/about.jpg"
                         alt="About us"
-                        width={500}
-                        height={500}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 500px"
                         quality={100}
                         style={{ objectFit: 'cover' }}
                     />
