@@ -27,6 +27,7 @@
     margin: 0 auto;
     padding: 0 2rem;
     text-align: center;
+    width: 100%;
 }
 
 .content h2 {
@@ -44,13 +45,14 @@
     position: relative;
     width: 100%;
     padding: 2rem 0;
+    margin: 0 -1rem;
 }
 
 .productsWrapper {
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
-    padding: 1rem 0;
+    padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
     overflow-x: auto;
@@ -58,6 +60,7 @@
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    position: relative;
 }
 
 .productsWrapper::-webkit-scrollbar {
@@ -152,14 +155,26 @@
 }
 
 .leftButton {
-    left: 1rem;
+    left: 0;
 }
 
 .rightButton {
-    right: 1rem;
+    right: 0;
 }
 
 @media (max-width: 768px) {
+    .content {
+        padding: 0 1rem;
+    }
+
+    .productsContainer {
+        padding: 1rem 0;
+    }
+
+    .productsWrapper {
+        padding: 1rem 0.5rem;
+    }
+
     .productCard {
         flex: 0 0 287px;
     }
@@ -172,5 +187,14 @@
         width: 35px;
         height: 35px;
         font-size: 1rem;
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    .leftButton {
+        left: 0.5rem;
+    }
+
+    .rightButton {
+        right: 0.5rem;
     }
 }
