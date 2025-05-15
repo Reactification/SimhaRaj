@@ -35,33 +35,35 @@ export default function About() {
     return (
         <section id="about" className={styles.about} ref={sectionRef}>
             <div className={styles.container}>
-                <div className={styles.imageWrapper}>
-                    <Image
-                        src="/images/about.jpg"
-                        alt="About us"
-                        fill
-                        sizes="(max-width: 768px) 100vw, 500px"
-                        quality={100}
-                        style={{ objectFit: 'cover' }}
-                    />
-                </div>
+                <h2>About Us</h2>
+                <div className={styles.contentWrapper}>
+                    <div className={styles.imageWrapper}>
+                        <Image
+                            src="/images/about.jpg"
+                            alt="About us"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 500px"
+                            quality={100}
+                            style={{ objectFit: 'cover' }}
+                        />
+                    </div>
 
-                <div className={styles.content}>
-                    <h2>About Us</h2>
-                    <p className={styles.description}>
-                        We are passionate about delivering exceptional value to our clients
-                        through innovative solutions and dedicated service. With years of
-                        experience and a commitment to excellence, we help businesses transform
-                        and grow in the digital age.
-                    </p>
-                    <div className={styles.features}>
-                        <div className={styles.feature}>
-                            <h3>Our Mission</h3>
-                            <p>To empower businesses with cutting-edge technology solutions.</p>
-                        </div>
-                        <div className={styles.feature}>
-                            <h3>Our Vision</h3>
-                            <p>To be the leading force in digital transformation worldwide.</p>
+                    <div className={styles.content}>
+                        <p className={styles.description}>
+                            We are passionate about delivering exceptional value to our clients
+                            through innovative solutions and dedicated service. With years of
+                            experience and a commitment to excellence, we help businesses transform
+                            and grow in the digital age.
+                        </p>
+                        <div className={styles.features}>
+                            <div className={styles.feature}>
+                                <h3>Our Mission</h3>
+                                <p>To empower businesses with cutting-edge technology solutions.</p>
+                            </div>
+                            <div className={styles.feature}>
+                                <h3>Our Vision</h3>
+                                <p>To be the leading force in digital transformation worldwide.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

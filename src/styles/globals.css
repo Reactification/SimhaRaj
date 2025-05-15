@@ -8,11 +8,14 @@
     --accent: #F97316;
     --text: #333333;
     --background: #FFFFFF;
+    --heading-color: #1E3A8A;
 
     /* Dark mode variables */
     --dark-primary: #0F1D45;
     --dark-background: #1A1A1A;
     --dark-text: #F3F4F6;
+    --dark-secondary: #2D3748;
+    --dark-heading-color: #F3F4F6;
 }
 
 /* Base styles */
@@ -36,7 +39,11 @@ body {
 /* Typography */
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
+    color: var(--heading-color);
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
@@ -117,6 +124,8 @@ h3 {
     --primary: var(--dark-primary);
     --background: var(--dark-background);
     --text: var(--dark-text);
+    --secondary: var(--dark-secondary);
+    --heading-color: var(--dark-heading-color);
 }
 
 /* Responsive design */

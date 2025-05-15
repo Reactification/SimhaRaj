@@ -27,9 +27,15 @@
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--accent);
     text-decoration: none;
     z-index: 2;
+    transition: color 0.3s ease;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .logo {
+    color: var(--heading-color);
 }
 
 .menu {
@@ -42,11 +48,28 @@
     color: var(--text);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
 }
 
 .link:hover {
     color: var(--accent);
+}
+
+.link:hover::after {
+    width: 100%;
 }
 
 .hamburger {

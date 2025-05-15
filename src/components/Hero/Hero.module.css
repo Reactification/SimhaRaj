@@ -43,6 +43,7 @@
     font-size: 4rem;
     margin-bottom: 1.5rem;
     line-height: 1.1;
+    color: var(--accent);
 }
 
 .subtitle {
@@ -66,4 +67,9 @@
     .subtitle {
         font-size: 1.2rem;
     }
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .title {
+    color: white;
 }
